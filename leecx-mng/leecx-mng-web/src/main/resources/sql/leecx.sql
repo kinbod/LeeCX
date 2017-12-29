@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50505
 File Encoding         : 65001
 
-Date: 2017-09-12 20:31:01
+Date: 2017-09-19 20:33:34
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -27,15 +27,29 @@ CREATE TABLE `data_dict` (
   `ddvalue` varchar(12) NOT NULL COMMENT '数据值',
   `is_show` int(1) NOT NULL COMMENT '是否显示，1：显示；2：不显示',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COMMENT='数据字典表';
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4 COMMENT='数据字典表';
 
 -- ----------------------------
 -- Records of data_dict
 -- ----------------------------
 INSERT INTO `data_dict` VALUES ('1', '性别', 'sex', '0', '女', '1');
-INSERT INTO `data_dict` VALUES ('2', '性别', 'sex', '1', '男', '0');
-INSERT INTO `data_dict` VALUES ('3', '性别', 'sex', '2', '不男', '0');
+INSERT INTO `data_dict` VALUES ('2', '性别', 'sex', '1', '男', '1');
+INSERT INTO `data_dict` VALUES ('3', '性别', 'sex', '2', '保密', '1');
+INSERT INTO `data_dict` VALUES ('4', '汽车类型', 'carType', '2', '公交车', '1');
 INSERT INTO `data_dict` VALUES ('5', '汽车类型', 'carType', '1', '轿车', '1');
+INSERT INTO `data_dict` VALUES ('6', '职业', 'job', '1', 'Java开发', '1');
+INSERT INTO `data_dict` VALUES ('7', '职业', 'job', '2', '前端开发', '1');
+INSERT INTO `data_dict` VALUES ('8', '职业', 'job', '3', '大数据开发', '1');
+INSERT INTO `data_dict` VALUES ('9', '职业', 'job', '4', 'ios开发', '1');
+INSERT INTO `data_dict` VALUES ('10', '职业', 'job', '5', 'Android开发', '1');
+INSERT INTO `data_dict` VALUES ('11', '职业', 'job', '6', 'Linux系统工程师', '1');
+INSERT INTO `data_dict` VALUES ('12', '职业', 'job', '7', 'PHP开发', '1');
+INSERT INTO `data_dict` VALUES ('13', '职业', 'job', '8', '.net开发', '1');
+INSERT INTO `data_dict` VALUES ('14', '职业', 'job', '9', 'C/C++', '1');
+INSERT INTO `data_dict` VALUES ('15', '职业', 'job', '10', '学生', '0');
+INSERT INTO `data_dict` VALUES ('16', '职业', 'job', '11', '其它', '1');
+INSERT INTO `data_dict` VALUES ('17', '职业', 'job', '12', '全栈牛逼架构师', '1');
+INSERT INTO `data_dict` VALUES ('18', '汽车类型', 'carType', '3', '海陆两用', '1');
 
 -- ----------------------------
 -- Table structure for demo_item
@@ -93,3 +107,4 @@ CREATE TABLE `sys_user` (
 INSERT INTO `sys_user` VALUES ('1709067GM45GAF5P', 'test0012', '123456', 'test001', '22', '0', '3', null, '上海市', '上海市市辖区', '静安区', '上海老薛', 'ZnjE', null, null, '0', '2017-09-06 10:35:28');
 INSERT INTO `sys_user` VALUES ('1709077CW608DP00', 'lee', 'lee111', 'lee', '18', '1', '1', null, '湖北省', '武汉市', '江岸区', '111', '2ozb', null, null, '1', '2017-09-07 10:27:07');
 INSERT INTO `sys_user` VALUES ('170908G65M59XWH0', 'test003', '888888', 'test003', '20', '0', '3', null, '上海市', '上海市市辖区', '黄浦区', '老薛家', 'tx5D', null, null, '1', '2017-09-08 21:19:40');
+INSERT INTO `sys_user` VALUES ('170918GDXW2DNP4H', 'test001', 'test001', 'test0016', '18', '1', '9', null, '湖北省', '鄂州市', '华容区', '123', 'W5k4', null, null, '0', '2017-09-18 21:42:51');

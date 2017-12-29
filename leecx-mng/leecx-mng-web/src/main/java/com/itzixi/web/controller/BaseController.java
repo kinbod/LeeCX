@@ -7,10 +7,12 @@ import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 
 import org.apache.shiro.SecurityUtils;
-import org.springframework.beans.factory.annotation.Value;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
 
+import com.itzixi.components.JedisClient;
+import com.itzixi.components.utils.RedisOperator;
 import com.itzixi.pojo.ActiveUser;
 
 /**
@@ -30,14 +32,17 @@ public class BaseController {
 //	@Autowired
 //	public JedisClient jedis;
 	
-	@Value("${REDIS_SESSION_KEY}")
-	public String REDIS_SESSION_KEY;
+	@Autowired
+	public RedisOperator jedis;
 	
-	@Value("${SESSION_EXPIRE}")
-	public Integer SESSION_EXPIRE;
-	
-	@Value("${ITZIXI_TOKEN}")
-	public String ITZIXI_TOKEN;
+//	@Value("${REDIS_SESSION_KEY}")
+//	public String REDIS_SESSION_KEY;
+//	
+//	@Value("${SESSION_EXPIRE}")
+//	public Integer SESSION_EXPIRE;
+//	
+//	@Value("${ITZIXI_TOKEN}")
+//	public String ITZIXI_TOKEN;
 	
 	/**
 	 * 默认分页行数

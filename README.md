@@ -10,6 +10,9 @@ LeeCX 开源后台管理系统，前端基于bootstrap+jquery，扁平化风格�
 6、使用SID（基于idworker）生成唯一主键，利于分库分表<br />
 其他技术将会不间断更新并且引入...<br />
 
+### 登录用户名以及密码：<br />
+test/test<br />
+
 ### 开发环境：<br />
 sts-eclipse, jdk8, tomcat7或8<br />
 
@@ -20,7 +23,11 @@ sts-eclipse, jdk8, tomcat7或8<br />
 4、数据库连接池：阿里巴巴 Druid 1.1.0<br />
 5、缓存：Redis/Jedis 2.8.0<br />
 6、日志管理：SLF4J + Log4j<br />
-7、前端框架：Bootstrap + Jquery<br />
+7、前端框架/组件：Bootstrap + Jquery + Jquery Validate + jqGrid + sweetalert + blockUI + icheck<br />
+
+### 更新历史：<br />
+20170919 增加component子模块，实现redis供多工程公用；增加数据字典功能（录制的视频链接在底部）<br />
+
 
 ### 工程结构：<br />
 ``` lua
@@ -29,7 +36,8 @@ LeeCX
 ├── leecx-root：母工程，主要用于管理pom
 ├── leecx-common：统一工具类，包含统一的utils以及枚举等
 └── leecx-mng：后台管理系统
-     ├── leecx-mng-pojo：entity，包含pojo，bo以及vo
+     ├── leecx-mng-component：通用组件工程，目前只包含redis
+     ├── leecx-mng-pojo：entity，包含pojo，bo以及vo
      ├── leecx-mng-mapper：mybitas的mapper.xml以及mapper.java文件
      ├── leecx-mng-service：service工程
      └── leecx-mng-web：web工程 (port:8080 可在pom中自由配置)
@@ -42,6 +50,7 @@ LeeCX
 
 
 视频推荐 我们也致力于技术视频的录制，希望大家学到更多的技术...<br />
+[《ssm redis 数据字典在J2EE中的多种应用与实现》](http://www.itzixi.com/course/detail.shtml?courseId=17092078Y3009WX4)<br />
 [《使用新版支付宝接口实现第三方网关支付》](http://www.itzixi.com/course/detail.shtml?courseId=170818C4XS6SPG9P)<br />
 [《SpringMVC 实现web端微信扫码支付(即时到账)》](http://www.itzixi.com/course/detail.shtml?courseId=1709029W0AFN7X1P)<br />
 [《Linux - Java开发者所需要掌握的一门最基本的技能》](http://www.itzixi.com/course/detail.shtml?courseId=170802GTMYF0GYNC)<br />

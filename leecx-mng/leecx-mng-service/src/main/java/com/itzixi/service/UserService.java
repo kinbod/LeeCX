@@ -1,6 +1,9 @@
 package com.itzixi.service;
 
+import java.util.List;
+
 import com.itzixi.common.pojo.JqGridResult;
+import com.itzixi.pojo.SysPermission;
 import com.itzixi.pojo.SysUser;
 
 /**
@@ -25,7 +28,7 @@ public interface UserService {
 	 * @author leechenxiang
 	 * @date 2017年9月5日 上午11:13:38
 	 */
-	public void saveUser(SysUser user);
+	public boolean saveUser(SysUser user);
 	
 	/**
 	 * 
@@ -36,7 +39,7 @@ public interface UserService {
 	 * @author leechenxiang
 	 * @date 2017年9月5日 上午11:14:46
 	 */
-	public JqGridResult queryUserList(String username, Integer page, Integer pageSize);
+	public JqGridResult queryUserList(SysUser user, Integer page, Integer pageSize);
 	
 	/**
 	 * 
@@ -89,4 +92,32 @@ public interface UserService {
 	 * @date 2017年9月5日 下午4:23:18
 	 */
 	public boolean queryUsernameIsExist(String username, String userId);
+	
+	/**
+	 * 
+	 * @Title: UserService.java
+	 * @Package com.itzixi.service
+	 * @Description: 根据用户查询用户信息，如果查不到，则返回空，用于登录查询
+	 * Copyright: Copyright (c) 2017
+	 * Company:FURUIBOKE.SCIENCE.AND.TECHNOLOGY
+	 * 
+	 * @author leechenxiang
+	 * @date 2017年10月19日 下午9:06:41
+	 * @version V1.0
+	 */
+	public SysUser queryUserByUsername(String username);
+	
+	/**
+	 * 
+	 * @Title: UserService.java
+	 * @Package com.itzixi.service
+	 * @Description: 根据用户id查询用户的权限资源字符串percode
+	 * Copyright: Copyright (c) 2017
+	 * Company:FURUIBOKE.SCIENCE.AND.TECHNOLOGY
+	 * 
+	 * @author leechenxiang
+	 * @date 2017年10月22日 下午9:35:34
+	 * @version V1.0
+	 */
+	public List<SysPermission> findPermissionListByUserId(String userid) throws Exception ;
 }
